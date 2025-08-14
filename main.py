@@ -1,6 +1,7 @@
 from typing import Optional
 
 from fastapi import FastAPI
+from scripts.mondrian_random import generate_random_mondrian
 
 app = FastAPI()
 
@@ -12,6 +13,6 @@ async def root():
 def help():
     return {"help": "See /docs for more information"}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/mondrian")
+def mondrian():
+    return generate_random_mondrian()

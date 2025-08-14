@@ -23,3 +23,7 @@ I've used render.com to deploy it to [generative-art-api.onrender.com](https://g
 ## Swagger UI
 
 As usual, the swagger is on the [/docs endpoint](https://generative-art-api.onrender.com/docs).
+
+## Image decoder
+
+Use https://base64.guru/converter/decode/image to decode the image (provided as a base64 string).
