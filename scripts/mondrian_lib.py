@@ -53,13 +53,13 @@ class MondrianObject:
         if len(params) == 0:
             if type == "square":
                 color = random.choices([red, blue, yellow], weights=[1, 1, 1])[0] # Get a random color
-                l = random.randint(2*LINE_WIDTH, CANVAS_WIDTH/2)
+                l = random.randint(2*LINE_WIDTH, CANVAS_WIDTH//2)
                 w, h = l, l
                 zorder = 1
             elif type == "rectangle":
                 color = random.choice([red, blue, yellow])
-                w = random.randint(2*LINE_WIDTH, CANVAS_WIDTH/2)
-                h = random.randint(2*LINE_WIDTH, CANVAS_HEIGHT/2)
+                w = random.randint(2*LINE_WIDTH, CANVAS_WIDTH//2)
+                h = random.randint(2*LINE_WIDTH, CANVAS_HEIGHT//2)
                 zorder = 1
             elif type == "row":
                 color = black
@@ -79,11 +79,11 @@ class MondrianObject:
         else:
             # Not random: Unpack the parameters. If not provided, use default values.
             color = params.get("color", black)
-            w = params.get("width", CANVAS_WIDTH/4)
-            h = params.get("height", CANVAS_HEIGHT/4)
+            w = params.get("width", CANVAS_WIDTH//4)
+            h = params.get("height", CANVAS_HEIGHT//4)
             zorder = params.get("zorder", 1)
-            x = params.get("x", CANVAS_WIDTH/2)
-            y = params.get("y", CANVAS_HEIGHT/2)
+            x = params.get("x", CANVAS_WIDTH//2)
+            y = params.get("y", CANVAS_HEIGHT//2)
         # Set the attributes of the object
         self.type = type
         self.color = color

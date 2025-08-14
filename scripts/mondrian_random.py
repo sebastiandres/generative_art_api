@@ -13,6 +13,8 @@ def generate_random_mondrian(seed=None, N=7, N_trys=10):
     if seed is None:
         seed = random.randint(0, 1000000)
         random.seed(seed)
+    else:
+        random.seed(seed)
     # Pack them into a dictionary
     params = {
         "seed": seed,

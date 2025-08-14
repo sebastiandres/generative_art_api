@@ -14,5 +14,5 @@ def help():
     return {"help": "See /docs for more information"}
 
 @app.get("/mondrian")
-def mondrian():
-    return generate_random_mondrian()
+def mondrian(seed: Optional[int] = None, N: Optional[int] = 7, N_trys: Optional[int] = 10):
+    return generate_random_mondrian(seed, N, N_trys)
